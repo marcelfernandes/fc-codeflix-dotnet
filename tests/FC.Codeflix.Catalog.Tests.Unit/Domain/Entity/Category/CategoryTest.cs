@@ -87,7 +87,7 @@ public class CategoryTest
         
         action.Should()
             .Throw<EntityValidationException>()
-            .WithMessage("Description should not be empty or null");
+            .WithMessage("Description should not be null");
     }
     
     [Theory(DisplayName = nameof(CategoryDomain_ShouldThrow_WhenNameIsLessThan3Characters))]
@@ -149,7 +149,7 @@ public class CategoryTest
         
         action.Should()
             .Throw<EntityValidationException>()
-            .WithMessage("Description should be less or equal than 10.000 characters long");
+            .WithMessage("Description should be less or equal than 10000 characters long");
     }
     
     [Fact(DisplayName = nameof(CategoryDomain_ShouldActivate_WhenInactive))]
@@ -271,7 +271,7 @@ public class CategoryTest
         
         action.Should()
             .Throw<EntityValidationException>()
-            .WithMessage("Description should be less or equal than 10.000 characters long");
+            .WithMessage("Description should be less or equal than 10000 characters long");
     }
 
 }
